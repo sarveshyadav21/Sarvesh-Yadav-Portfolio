@@ -106,12 +106,12 @@ export function PortfolioChatbot({ variant = "floating" }: Props) {
     >
       <div className="flex items-center justify-between border-b border-border bg-violet-500/10 px-4 py-3">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-600 text-sm font-bold text-white">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-600 text-sm font-bold text-white shadow-xs">
             SY
           </div>
           <div>
-            <p className="text-sm font-semibold text-white">Sarvesh Yadav</p>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-sm font-bold text-zinc-900 dark:text-white">Sarvesh Yadav</p>
+            <p className="text-xs text-zinc-600 dark:text-muted-foreground">
               {provider === "ollama"
                 ? "Online · replying via Ollama"
                 : provider === "gemini"
@@ -119,7 +119,7 @@ export function PortfolioChatbot({ variant = "floating" }: Props) {
                   : "Usually replies in a few seconds"}
             </p>
           </div>
-          <span className="ml-1 h-2 w-2 rounded-full bg-emerald-400" />
+          <span className="ml-1 h-2 w-2 rounded-full bg-emerald-500 dark:bg-emerald-400" />
         </div>
         {variant === "floating" && (
           <button
@@ -157,7 +157,7 @@ export function PortfolioChatbot({ variant = "floating" }: Props) {
                     duration: 1,
                     delay: dot * 0.2,
                   }}
-                  className="h-1.5 w-1.5 rounded-full bg-violet-400"
+                  className="h-1.5 w-1.5 rounded-full bg-violet-600 dark:bg-violet-400"
                 />
               ))}
             </span>
@@ -167,13 +167,13 @@ export function PortfolioChatbot({ variant = "floating" }: Props) {
       </div>
 
       {messages.length <= 1 && (
-        <div className="flex flex-wrap gap-2 border-t border-white/5 px-3 py-2.5">
+        <div className="flex flex-wrap gap-2 border-t border-border/50 px-3 py-2.5">
           {STARTERS.map((starter) => (
             <button
               key={starter}
               type="button"
               onClick={() => sendMessage(starter)}
-              className="rounded-full border border-border bg-surface px-3 py-1.5 text-xs text-muted-foreground transition hover:border-violet-500/40 hover:text-foreground"
+              className="rounded-full border border-zinc-300/80 dark:border-border bg-white dark:bg-surface px-3 py-1.5 text-xs font-medium text-zinc-700 dark:text-muted-foreground transition hover:border-violet-500/50 hover:text-violet-600 dark:hover:text-foreground shadow-xs"
             >
               {starter}
             </button>
@@ -188,7 +188,7 @@ export function PortfolioChatbot({ variant = "floating" }: Props) {
             onChange={(event) => setInput(event.target.value)}
             onKeyDown={(event) => event.key === "Enter" && sendMessage()}
             placeholder="Message Sarvesh…"
-            className="flex-1 rounded-xl border border-border bg-background px-4 py-2.5 text-sm text-white outline-none placeholder:text-muted-foreground focus:border-violet-500/50"
+            className="flex-1 rounded-xl border border-zinc-300 dark:border-border bg-white dark:bg-background px-4 py-2.5 text-sm text-zinc-900 dark:text-white outline-none placeholder:text-zinc-400 dark:placeholder:text-muted-foreground focus:border-violet-500/50"
           />
           <button
             type="button"

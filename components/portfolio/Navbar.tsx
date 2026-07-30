@@ -100,8 +100,8 @@ export function Navbar() {
                 href={link.href}
                 className={`text-sm transition-all duration-200 ${
                   isActive
-                    ? "font-semibold text-violet-600 dark:text-violet-300 bg-violet-500/10 dark:bg-violet-500/20 px-3 py-1 rounded-full border border-violet-500/30 shadow-sm"
-                    : "text-muted-foreground hover:text-foreground px-2 py-1"
+                    ? "font-semibold text-violet-700 dark:text-violet-300 bg-violet-500/10 dark:bg-violet-500/20 px-3 py-1 rounded-full border border-violet-500/30 shadow-xs"
+                    : "text-zinc-600 hover:text-zinc-900 dark:text-muted-foreground dark:hover:text-foreground px-2 py-1"
                 }`}
               >
                 {link.label}
@@ -110,7 +110,7 @@ export function Navbar() {
           })}
           <a
             href="#chat"
-            className="flex items-center gap-2 rounded-full bg-violet-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-violet-500 shadow-md shadow-violet-600/20"
+            className="flex items-center gap-2 rounded-full bg-violet-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-violet-500 shadow-md shadow-violet-600/20 active:scale-95"
           >
             <Sparkles className="h-4 w-4" />
             Ask AI
@@ -118,7 +118,7 @@ export function Navbar() {
           <a
             href="/resume"
             onClick={handleResumeClick}
-            className="flex items-center gap-1.5 rounded-full border border-violet-500/40 bg-violet-500/15 px-3.5 py-1.5 text-sm font-semibold text-violet-300 transition hover:bg-violet-500/25"
+            className="flex items-center gap-1.5 rounded-full border border-violet-500/40 bg-violet-500/10 dark:bg-violet-500/15 px-3.5 py-1.5 text-sm font-semibold text-violet-700 dark:text-violet-300 shadow-xs transition hover:bg-violet-500/20 dark:hover:bg-violet-500/25 active:scale-95"
           >
             <FileText className="h-4 w-4" />
             Resume
@@ -156,8 +156,8 @@ export function Navbar() {
                   onClick={() => setOpen(false)}
                   className={`block py-2.5 text-sm transition-colors ${
                     isActive
-                      ? "font-semibold text-violet-600 dark:text-violet-300 pl-3 border-l-2 border-violet-500 bg-violet-500/10 rounded-r-lg"
-                      : "text-muted-foreground"
+                      ? "font-semibold text-violet-700 dark:text-violet-300 pl-3 border-l-2 border-violet-500 bg-violet-500/10 rounded-r-lg"
+                      : "text-zinc-600 dark:text-muted-foreground"
                   }`}
                 >
                   {link.label}
@@ -170,7 +170,7 @@ export function Navbar() {
                 setOpen(false);
                 handleResumeClick(e);
               }}
-              className="mt-3 flex items-center justify-center gap-2 rounded-full border border-violet-500/40 bg-violet-500/15 py-2 text-sm font-semibold text-violet-300"
+              className="mt-3 flex items-center justify-center gap-2 rounded-full border border-violet-500/40 bg-violet-500/10 dark:bg-violet-500/15 py-2 text-sm font-semibold text-violet-700 dark:text-violet-300"
             >
               <FileText className="h-4 w-4" />
               Resume

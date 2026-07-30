@@ -12,53 +12,61 @@ export function Projects() {
           <article
             key={project.id}
             data-reveal-item
-            className={`group relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br ${project.gradient} p-6 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1.5`}
+            className={`group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-zinc-200 dark:border-white/10 bg-white dark:bg-[#0c101d] bg-gradient-to-br ${project.gradient} p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl dark:hover:border-violet-500/40`}
           >
-            {project.featured && (
-              <span className="absolute right-4 top-4 flex items-center gap-1 rounded-full bg-violet-500/20 px-2 py-1 text-xs font-medium text-violet-300">
-                <Star className="h-3 w-3 fill-current" />
-                Flagship
-              </span>
-            )}
+            <div>
+              <div className="flex items-start justify-between gap-4">
+                <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
+                  {project.title}
+                </h3>
+                {project.featured && (
+                  <span className="shrink-0 inline-flex items-center gap-1 rounded-full border border-violet-500/30 bg-violet-500/10 dark:bg-violet-500/20 px-2.5 py-1 text-xs font-semibold text-violet-700 dark:text-violet-300 shadow-xs">
+                    <Star className="h-3 w-3 fill-current text-violet-600 dark:text-violet-300" />
+                    Flagship
+                  </span>
+                )}
+              </div>
 
-            <h3 className="text-xl font-bold text-foreground">{project.title}</h3>
-            <p className="mt-3 text-sm leading-6 text-muted-foreground">
-              {project.description}
-            </p>
+              <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
+                {project.description}
+              </p>
 
-            <ul className="mt-4 space-y-2">
-              {project.highlights.map((point) => (
-                <li
-                  key={point}
-                  className="flex items-start gap-2 text-sm text-muted-foreground"
-                >
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400" />
-                  {point}
-                </li>
-              ))}
-            </ul>
+              <ul className="mt-4 space-y-2">
+                {project.highlights.map((point) => (
+                  <li
+                    key={point}
+                    className="flex items-start gap-2 text-sm text-zinc-700 dark:text-zinc-300"
+                  >
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-600 dark:bg-violet-400" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
 
-            <div className="mt-5 flex flex-wrap gap-2">
-              {project.tech.map((tech) => (
-                <span
-                  key={tech}
-                  className="rounded-lg bg-black/30 px-2 py-1 text-xs text-muted-foreground"
-                >
-                  {tech}
-                </span>
-              ))}
+              <div className="mt-5 flex flex-wrap gap-2">
+                {project.tech.map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-lg border border-zinc-200 dark:border-white/10 bg-zinc-100 dark:bg-white/10 px-2.5 py-1 text-xs font-medium text-zinc-800 dark:text-zinc-200 transition-colors hover:border-violet-500/40"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
 
             {project.link && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-violet-300 transition group-hover:text-foreground"
-              >
-                View live
-                <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
+              <div className="mt-6 pt-2">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-violet-600 px-4 py-2.5 text-sm font-bold text-white shadow-md shadow-violet-600/25 transition-all duration-200 hover:bg-violet-500 hover:shadow-lg hover:shadow-violet-600/35 hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  <span>View live</span>
+                  <ArrowUpRight className="h-4 w-4 stroke-[2.5] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
+              </div>
             )}
           </article>
         ))}

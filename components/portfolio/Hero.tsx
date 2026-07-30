@@ -157,10 +157,10 @@ export function Hero() {
         </div>
 
         <div>
-          <span className="hero-badge inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-1.5 text-xs font-medium text-violet-300">
+          <span className="hero-badge inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-1.5 text-xs font-semibold text-violet-700 dark:text-violet-300 shadow-xs">
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 dark:bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500 dark:bg-emerald-400" />
             </span>
             {profile.availability}
           </span>
@@ -168,29 +168,29 @@ export function Hero() {
 
         <h1 className="hero-title mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
           Hi, I&apos;m{" "}
-          <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-violet-600 via-fuchsia-600 to-cyan-600 dark:from-violet-400 dark:via-fuchsia-400 dark:to-cyan-400 bg-clip-text text-transparent">
             {profile.name.split(" ")[0]}
           </span>
         </h1>
 
-        <p className="hero-subtitle mt-3 text-lg text-muted-foreground sm:text-xl">
+        <p className="hero-subtitle mt-3 text-lg text-zinc-700 dark:text-muted-foreground font-medium sm:text-xl">
           {profile.title}
         </p>
 
-        <p className="hero-tagline mx-auto mt-4 max-w-2xl text-base sm:text-lg leading-relaxed text-muted-foreground">
+        <p className="hero-tagline mx-auto mt-4 max-w-2xl text-base sm:text-lg leading-relaxed text-zinc-600 dark:text-muted-foreground">
           {profile.tagline}
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5">
           <a
             href="#projects"
-            className="hero-cta rounded-2xl bg-white px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-zinc-200"
+            className="hero-cta rounded-2xl bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100 px-5 py-2.5 text-sm font-semibold shadow-md transition-all duration-200 hover:scale-[1.02]"
           >
             View my work
           </a>
           <a
             href="#chat"
-            className="hero-cta rounded-2xl border border-border bg-surface/80 px-5 py-2.5 text-sm font-semibold text-foreground transition hover:border-violet-500/50"
+            className="hero-cta rounded-2xl border border-zinc-300 dark:border-white/15 bg-white dark:bg-[#0c101d] px-5 py-2.5 text-sm font-semibold text-zinc-900 dark:text-white shadow-xs transition-all duration-200 hover:border-violet-500/60 hover:shadow-sm"
           >
             Chat with my AI
           </a>
@@ -201,7 +201,7 @@ export function Hero() {
             }
             target="_blank"
             rel="noopener noreferrer"
-            className="hero-cta inline-flex items-center gap-2 rounded-2xl border border-cyan-500/30 bg-cyan-500/10 px-5 py-2.5 text-sm font-semibold text-cyan-300 transition hover:bg-cyan-500/20"
+            className="hero-cta inline-flex items-center gap-2 rounded-2xl border border-cyan-500/40 bg-cyan-500/10 px-5 py-2.5 text-sm font-semibold text-cyan-700 dark:text-cyan-300 shadow-xs transition-all duration-200 hover:bg-cyan-500/20 hover:scale-[1.02]"
           >
             Live demo
             <ExternalLink className="h-4 w-4" />
@@ -237,7 +237,7 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="hero-social-link flex h-10 w-10 items-center justify-center rounded-xl border border-border text-muted-foreground transition hover:border-violet-500/50 hover:text-foreground"
+              className="hero-social-link flex h-10 w-10 items-center justify-center rounded-xl border border-zinc-300 dark:border-white/15 bg-white dark:bg-[#0c101d] text-zinc-700 dark:text-zinc-300 shadow-xs transition hover:border-violet-500/60 hover:text-violet-600 dark:hover:text-white"
             >
               <Icon className="h-5 w-5" />
             </a>

@@ -14,43 +14,95 @@ export const projects: Project[] = [
     id: "incident-intelligence",
     title: "AI Incident Intelligence Platform",
     description:
-      "Enterprise multi-agent incident analysis with real-time RCA, vector similarity, and executive reporting.",
+      "Enterprise-grade AI platform that automates incident investigation using multi-agent workflows, vector similarity search, and real-time root cause analysis.",
     highlights: [
-      "11 AI agents with Ollama model routing (phi3, mistral, llama3)",
-      "BullMQ + Redis + WebSocket live progress",
-      "Similar incidents, dependency graphs, auto postmortems",
+      "11 AI agents with intelligent model routing using Ollama",
+      "Real-time investigation pipeline with BullMQ, Redis & WebSockets",
+      "Vector similarity search, dependency graphs & automated postmortems",
     ],
-    tech: ["NestJS", "Next.js", "Prisma", "pgvector", "BullMQ", "Ollama"],
+    tech: [
+      "NestJS",
+      "Next.js",
+      "Prisma",
+      "PostgreSQL",
+      "pgvector",
+      "BullMQ",
+      "Redis",
+      "Ollama",
+    ],
     link: "https://incident-intelligence-platform-psi.vercel.app/login",
     featured: true,
     gradient: "from-violet-600/20 via-fuchsia-500/10 to-cyan-500/20",
   },
+
   {
-    id: "realtime-ws",
-    title: "Real-Time Collaboration (WebSocket + Redis)",
+    id: "vectorshift",
+    title: "VectorShift - Visual AI Workflow Builder",
     description:
-      "Live data sync via Socket.io and Redis Pub/Sub integrated into Next.js without polling.",
+      "Interactive drag-and-drop AI workflow builder inspired by LangFlow and n8n, enabling users to visually create and validate complex AI pipelines.",
     highlights: [
-      "Zero-polling live UI updates",
-      "Event-driven architecture",
-      "Node.js + Next.js full stack",
+      "9 custom workflow nodes with dynamic handle generation",
+      "Graph validation using Kahn's Algorithm for DAG detection",
+      "FastAPI backend with ReactFlow-powered visual editor",
     ],
-    tech: ["Node.js", "Socket.io", "Redis Pub/Sub", "Next.js"],
-    gradient: "from-cyan-600/20 via-teal-500/10 to-emerald-500/20",
+    tech: [
+      "React",
+      "ReactFlow",
+      "Zustand",
+      "FastAPI",
+      "Python",
+      "Pydantic",
+      "Docker",
+    ],
+    link: "https://vector-shift-sigma-lake.vercel.app/",
+    featured: true,
+    gradient: "from-cyan-600/20 via-sky-500/10 to-blue-500/20",
   },
+
   {
-    id: "ai-chatbot",
-    title: "AI Chatbot & Data Automation",
+    id: "document-extraction",
+    title: "Document Extraction & Validation Agent",
     description:
-      "Microservices for in-app chatbot and LLM pipelines using OpenAI, Claude, Gemini, and Ollama.",
+      "AI-powered OCR platform that extracts structured information from receipts and invoices using local LLMs, deterministic validation, and confidence scoring.",
     highlights: [
-      "Node.js AI microservices",
-      "Portfolio assistant with Ollama fallback",
-      "Structured resume-grounded responses",
+      "OCR with Tesseract and local Ollama LLM integration",
+      "Business-rule validation with evidence generation",
+      "CSV export, batch processing & interactive web dashboard",
     ],
-    tech: ["Node.js", "Ollama", "OpenAI", "Next.js"],
+    tech: [
+      "Next.js",
+      "Node.js",
+      "TypeScript",
+      "Tesseract.js",
+      "Ollama",
+      "Zod",
+      "Tailwind CSS",
+    ],
+    link: "https://document-extraction-agent-z039.onrender.com/",
+    featured: true,
     gradient: "from-emerald-600/20 via-teal-500/10 to-cyan-500/20",
-  }
+  },
+
+  {
+    id: "portfolio",
+    title: "Personal Portfolio Website",
+    description:
+      "A modern, responsive portfolio showcasing my software engineering experience, featured projects, technical skills, and achievements.",
+    highlights: [
+      "Interactive project showcase with smooth animations",
+      "Responsive UI optimized for performance and accessibility",
+      "Built with reusable components and modern design principles",
+    ],
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
+    link: "https://sarvesh-yadav-portfolio.vercel.app/",
+    gradient: "from-orange-600/20 via-pink-500/10 to-rose-500/20",
+  },
 ];
 
 export const skills = [

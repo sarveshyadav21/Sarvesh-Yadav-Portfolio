@@ -15,21 +15,21 @@ export function ChatMessage({ role, content, fileUrl }: Props) {
   return (
     <div className={cn("flex gap-2", isUser ? "flex-row-reverse" : "flex-row")}>
       {!isUser && (
-        <div className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-violet-500/25 text-xs font-bold text-violet-300">
+        <div className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-violet-500/20 text-xs font-bold text-violet-700 dark:text-violet-300">
           SY
         </div>
       )}
 
       <div
         className={cn(
-          "max-w-[88%] rounded-2xl px-3.5 py-2.5",
+          "max-w-[88%] rounded-2xl px-3.5 py-2.5 shadow-xs",
           isUser
             ? "rounded-br-md bg-violet-600 text-white"
-            : "rounded-bl-md border border-border bg-surface/90 text-foreground",
+            : "rounded-bl-md border border-zinc-200/80 dark:border-border bg-white dark:bg-surface/90 text-zinc-800 dark:text-foreground",
         )}
       >
         {!isUser && (
-          <p className="mb-1 text-[10px] font-medium uppercase tracking-wide text-violet-400/80">
+          <p className="mb-1 text-[10px] font-semibold uppercase tracking-wide text-violet-700 dark:text-violet-400">
             Sarvesh
           </p>
         )}
@@ -37,7 +37,7 @@ export function ChatMessage({ role, content, fileUrl }: Props) {
         <div
           className={cn(
             "chat-markdown text-[13px] leading-relaxed",
-            isUser ? "text-white" : "text-foreground/90",
+            isUser ? "text-white" : "text-zinc-800 dark:text-foreground/90",
           )}
         >
           <ReactMarkdown
@@ -54,15 +54,15 @@ export function ChatMessage({ role, content, fileUrl }: Props) {
                 </ol>
               ),
               li: ({ children }) => (
-                <li className="text-foreground/90">{children}</li>
+                <li className={isUser ? "text-white" : "text-zinc-800 dark:text-foreground/90"}>{children}</li>
               ),
               strong: ({ children }) => (
-                <strong className="font-semibold text-white">{children}</strong>
+                <strong className={cn("font-bold", isUser ? "text-white" : "text-zinc-900 dark:text-white")}>{children}</strong>
               ),
               a: ({ href, children }) => (
                 <a
                   href={href}
-                  className="text-violet-400 underline hover:text-violet-300"
+                  className="text-violet-600 dark:text-violet-400 font-medium underline hover:text-violet-700 dark:hover:text-violet-300"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
