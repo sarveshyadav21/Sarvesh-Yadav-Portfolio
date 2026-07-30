@@ -318,7 +318,7 @@ npx prisma studio
 
 | Path | Type | Description |
 |---|---|---|
-| `/` | Public | Portfolio home (Hero, About, Skills, Projects, Experience, Education, Chat, Contact) |
+| `/` | Public | Portfolio home (Home, About, Skills, Projects, Experience, Education, Chat, Contact) |
 | `/login` | Public | Login page |
 | `/signup` | Public | Registration page |
 | `/dashboard` | Protected | User dashboard (requires auth) |
