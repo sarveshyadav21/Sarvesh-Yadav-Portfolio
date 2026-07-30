@@ -18,7 +18,9 @@ export function Contact() {
 
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
-            href={`mailto:${profile.email}`}
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.email)}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-2xl bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100 px-6 py-3 text-sm font-semibold shadow-md transition-all duration-200 hover:scale-[1.02]"
           >
             <Mail className="h-4 w-4" />

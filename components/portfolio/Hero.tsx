@@ -229,7 +229,11 @@ export function Hero() {
           {[
             { href: profile.github, icon: Github, label: "GitHub" },
             { href: profile.linkedin, icon: Linkedin, label: "LinkedIn" },
-            { href: `mailto:${profile.email}`, icon: Mail, label: "Email" },
+            {
+              href: `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.email)}`,
+              icon: Mail,
+              label: "Email",
+            },
           ].map(({ href, icon: Icon, label }) => (
             <a
               key={href}

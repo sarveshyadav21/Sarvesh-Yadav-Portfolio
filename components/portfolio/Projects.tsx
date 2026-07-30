@@ -7,11 +7,11 @@ import { projects } from "../../data/projects";
 export function Projects() {
   return (
     <Section id="projects" subtitle="Portfolio" title="Featured projects">
-      <div data-reveal-stagger className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-6 lg:grid-cols-2">
         {projects.map((project) => (
           <article
             key={project.id}
-            data-reveal-item
+            data-reveal
             className={`group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-zinc-200 dark:border-white/10 bg-white dark:bg-[#0c101d] bg-gradient-to-br ${project.gradient} p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl dark:hover:border-violet-500/40`}
           >
             <div>
