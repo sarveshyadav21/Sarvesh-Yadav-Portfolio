@@ -194,7 +194,7 @@ export function Hero() {
           >
             Chat with my AI
           </a>
-          <a
+          {/* <a
             href={
               process.env.NEXT_PUBLIC_INCIDENT_PLATFORM_URL ??
               "http://localhost:3000"
@@ -205,7 +205,7 @@ export function Hero() {
           >
             Live demo
             <ExternalLink className="h-4 w-4" />
-          </a>
+          </a> */}
           <a
             href="/resume"
             onClick={(e) => {
